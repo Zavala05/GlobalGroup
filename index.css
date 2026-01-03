@@ -1,0 +1,450 @@
+:root {
+    --primary-color: #004e92; /* Azul corporativo */
+    --secondary-color: #fca311; /* Acento industrial (amarillo/naranja) */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #f9f9f9;
+}
+
+.navbar {
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.1); /* Transparente inicio */
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Estado Scrolled (Azul oscuro) */
+.navbar.scrolled {
+    background: rgba(0, 78, 146, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    padding: 0.5rem 5%; /* Se hace un poco más pequeño al bajar */
+}
+
+/* Logo */
+.navbar-brand.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .navbar-brand.logo {
+    color: #fff !important;
+}
+
+/* Links */
+.nav-link {
+    color: white !important ;
+    font-weight: 500;
+    margin-left: 1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.navbar.scrolled .nav-link {
+    color: #fff !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Toggler (Hamburguesa) */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/* Cambiar color del icono hamburguesa al bajar */
+.navbar.scrolled .navbar-toggler span {
+    color: #fff !important;
+}
+
+/* Menú Móvil Desplegable */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(0, 78, 146, 0.98); /* Fondo azul sólido en móvil */
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .nav-link {
+        color: #fff !important; /* Texto blanco en móvil */
+        margin-left: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .navbar-brand.logo {
+        color: var(--primary-color); /* Logo mantiene color original si no hay scroll */
+    }
+    /* Si se hace scroll en movil, el logo cambia a blanco */
+    .navbar.scrolled .navbar-brand.logo {
+        color: #fff !important;
+    }
+    /* Si NO hay scroll en móvil, necesitamos que el toggle sea visible (azul) */
+    .navbar:not(.scrolled) .navbar-toggler span {
+        color: var(--primary-color) !important;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Navbar con efecto Glassmorphism */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 78, 146, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar.scrolled .nav-links a {
+    color: #fff;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.navbar.scrolled .logo {
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    background-attachment: fixed; /* Efecto Parallax básico */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e08e00;
+    transform: translateY(-3px);
+}
+
+/* Secciones Generales */
+.section-padding {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 10px auto;
+}
+
+/* Grid Layouts */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+/* Cards de Perfil */
+.card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Parallax Section (Nosotros) */
+.parallax-section {
+    background: url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 100px 10%;
+    color: #fff;
+}
+
+.parallax-overlay {
+    background: rgba(0, 78, 146, 0.85); /* Tinte azul */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px
+}
+
+.parallax-section .container {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   
+    
+}
+
+.parallax-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.info-item i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+/* Badges de Conexiones */
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.map-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.badge {
+    background: #fff;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+#conexiones{
+    margin-top: 60px;
+    text-align: center;
+}
+
+#conexiones p{
+    margin:10px
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Portafolio Imágenes */
+.portfolio-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: #fff;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    background: rgba(0, 78, 146, 0.9);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .section-padding {
+        padding: 50px 5%;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.social-links a {
+    color: var(--text-light);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
