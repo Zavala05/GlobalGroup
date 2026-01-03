@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #004e92; /* Azul corporativo */
-    --secondary-color: #fca311; /* Acento industrial (amarillo/naranja) */
+    --primary-color: #004e92;
+    --secondary-color: #fca311;
     --text-dark: #333;
     --text-light: #f4f4f4;
     --bg-light: #f9f9f9;
@@ -15,19 +15,17 @@ img{
 
 .navbar {
     padding: 1rem 5%;
-    background: rgba(255, 255, 255, 0.1); /* Transparente inicio */
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
-/* Estado Scrolled (Azul oscuro) */
 .navbar.scrolled {
     background: rgba(0, 78, 146, 0.95) !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    padding: 0.5rem 5%; /* Se hace un poco más pequeño al bajar */
+    padding: 0.5rem 5%;
 }
 
-/* Logo */
 .navbar-brand.logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -41,7 +39,6 @@ img{
     color: #fff !important;
 }
 
-/* Links */
 .nav-link {
     color: white !important ;
     font-weight: 500;
@@ -62,7 +59,6 @@ img{
     color: var(--secondary-color) !important;
 }
 
-/* Toggler (Hamburguesa) */
 .navbar-toggler {
     border: none;
     outline: none;
@@ -70,33 +66,29 @@ img{
 .navbar-toggler:focus {
     box-shadow: none;
 }
-/* Cambiar color del icono hamburguesa al bajar */
 .navbar.scrolled .navbar-toggler span {
     color: #fff !important;
 }
 
-/* Menú Móvil Desplegable */
 @media (max-width: 991px) {
     .navbar-collapse {
-        background: rgba(0, 78, 146, 0.98); /* Fondo azul sólido en móvil */
+        background: rgba(0, 78, 146, 0.98);
         padding: 20px;
         border-radius: 10px;
         margin-top: 10px;
     }
     .nav-link {
-        color: #fff !important; /* Texto blanco en móvil */
+        color: #fff !important;
         margin-left: 0;
         padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     .navbar-brand.logo {
-        color: var(--primary-color); /* Logo mantiene color original si no hay scroll */
+        color: var(--primary-color);
     }
-    /* Si se hace scroll en movil, el logo cambia a blanco */
     .navbar.scrolled .navbar-brand.logo {
         color: #fff !important;
     }
-    /* Si NO hay scroll en móvil, necesitamos que el toggle sea visible (azul) */
     .navbar:not(.scrolled) .navbar-toggler span {
         color: var(--primary-color) !important;
     }
@@ -114,7 +106,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar con efecto Glassmorphism */
 .navbar {
     position: fixed;
     top: 0;
@@ -167,7 +158,6 @@ body {
     transition: color 0.3s;
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
@@ -176,7 +166,7 @@ body {
     justify-content: center;
     position: relative;
     text-align: center;
-    background-attachment: fixed; /* Efecto Parallax básico */
+    background-attachment: fixed;
 }
 
 .hero-overlay {
@@ -225,7 +215,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* Secciones Generales */
 .section-padding {
     padding: 80px 10%;
 }
@@ -248,7 +237,6 @@ body {
     margin: 10px auto;
 }
 
-/* Grid Layouts */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -261,7 +249,6 @@ body {
     gap: 30px;
 }
 
-/* Cards de Perfil */
 .card {
     background: #fff;
     padding: 40px 20px;
@@ -281,7 +268,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Parallax Section (Nosotros) */
 .parallax-section {
     background: url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
     background-attachment: fixed;
@@ -291,7 +277,7 @@ body {
 }
 
 .parallax-overlay {
-    background: rgba(0, 78, 146, 0.85); /* Tinte azul */
+    background: rgba(0, 78, 146, 0.85);
     position: absolute;
     top: 0;
     left: 0;
@@ -428,7 +414,6 @@ body {
     }
 }
 
-/* Footer */
 footer {
     background: var(--primary-color);
     color: var(--text-light);
