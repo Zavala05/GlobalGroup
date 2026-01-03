@@ -1,0 +1,484 @@
+/* =========================================
+   1. VARIABLES Y BASE (Consistencia de Marca)
+   ========================================= */
+:root {
+    --primary-color: #004e92;   /* Azul Corporativo */
+    --secondary-color: #fca311; /* Naranja Industrial */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #f8f9fa;
+}
+
+img{
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 100%;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background-color: #fff;
+    overflow-x: hidden; /* Evita scroll horizontal indeseado */
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* =========================================
+   2. NAVBAR (Estilo Glassmorphism Fijo)
+   ========================================= */
+/* Nota: Incluimos esto para asegurar que el menú se vea bien en esta página también */
+.navbar {
+    padding: 1rem 5%;
+    background: rgba(0, 78, 146, 0.95); /* Azul sólido por defecto en esta página interna */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+    letter-spacing: 2px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* =========================================
+   3. HEADER DE PÁGINA (Compacto)
+   ========================================= */
+.page-header {
+    height: 60vh; /* Altura controlada, no pantalla completa */
+    background: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0; 
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 78, 146, 0.8), rgba(0, 0, 0, 0.6));
+}
+
+.header-content {
+    z-index: 2;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* =========================================
+   4. SISTEMA DE PESTAÑAS (TABS)
+   ========================================= */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Estilo de los botones de las pestañas */
+.nav-pills {
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: inline-flex; /* Centra el contenedor */
+}
+
+.nav-pills .nav-link {
+    border-radius: 50px;
+    color: var(--primary-color) !important;
+    padding: 12px 30px;
+    font-weight: 600;
+    margin: 0 5px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: rgba(0, 78, 146, 0.05);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--secondary-color) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 10px rgba(252, 163, 17, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Contenido dentro de las pestañas */
+.tab-content {
+    margin-top: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.tab-pane h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.tab-pane img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.tab-pane img:hover {
+    transform: scale(1.02);
+}
+
+/* Listas personalizadas con iconos */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: start;
+    color: #555;
+}
+
+.custom-list li i {
+    color: var(--secondary-color);
+    margin-right: 15px;
+    margin-top: 5px; /* Alinea icono con texto */
+}
+
+/* Títulos pequeños en listas (Automotriz) */
+.tab-pane h5 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   5. TARJETAS DE HERRAMIENTAS (GRID)
+   ========================================= */
+.tool-card {
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #666;
+    border: 1px solid #eee;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.03);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tool-card:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 78, 146, 0.2);
+    border-color: var(--primary-color);
+}
+
+/* =========================================
+   6. SLIDER INFINITO DE MARCAS
+   ========================================= */
+.brands-section {
+    background: #fff;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.brands-section .section-title {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.slider {
+    height: 100px;
+    margin: auto;
+    position: relative;
+    width: 90%; /* Un poco menos del ancho total */
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* Sombras laterales para difuminar entrada/salida */
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+}
+
+.slider::before { left: 0; top: 0; }
+.slider::after { right: 0; top: 0; transform: rotateZ(180deg); }
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 16); /* Ajustar: Ancho slide (250) * Cantidad Total de Elementos en HTML */
+    animation: scroll 35s linear infinite;
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.brand-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.slide:hover .brand-text {
+    color: var(--primary-color);
+    text-shadow: 0 2px 10px rgba(0,78,146,0.2);
+    transform: scale(1.1);
+}
+
+/* Animación Clave */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); } /* Mueve la mitad de los elementos (el set original) */
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.social-links a {
+    color: var(--text-light);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* =========================================
+   8. RESPONSIVE (Móvil)
+   ========================================= */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-pills {
+        flex-direction: column; /* Pestañas una debajo de otra en móvil */
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .nav-pills .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+    
+    .tab-pane img {
+        margin-top: 20px; /* Separación imagen/texto en móvil */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+}
+
+/* --- NUEVOS ESTILOS PARA EL CATÁLOGO DETALLADO --- */
+
+/* Tarjetas de Detalle (Grid de Industriales) */
+.detail-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    height: 100%; /* Para que todas tengan la misma altura */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 78, 146, 0.1);
+    border-color: rgba(0, 78, 146, 0.2);
+}
+
+.detail-card h4 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.detail-card hr {
+    opacity: 0.1;
+    margin: 15px 0;
+}
+
+/* Listas pequeñas dentro de las tarjetas */
+.micro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.micro-list li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.micro-list li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Caja especial para Seguridad EPI */
+.bg-light-blue {
+    background-color: rgba(0, 78, 146, 0.05);
+    border: 1px dashed var(--primary-color);
+}
+
+/* Cajas de Marcas (Transporte/Construcción) */
+.brand-box-list {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.brand-box-list h5 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.brand-tag {
+    background: #f8f9fa;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: all 0.2s;
+}
+
+.brand-tag:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Variación amarilla para maquinaria */
+.brand-tag.warning:hover {
+    background: var(--secondary-color);
+    color: #fff;
+    border-color: var(--secondary-color);
+}

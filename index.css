@@ -6,6 +6,13 @@
     --bg-light: #f9f9f9;
 }
 
+img{
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 100%;
+    
+}
+
 .navbar {
     padding: 1rem 5%;
     background: rgba(255, 255, 255, 0.1); /* Transparente inicio */
@@ -442,9 +449,10 @@ footer {
     color: var(--text-light);
     margin: 0 10px;
     font-size: 1.5rem;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .social-links a:hover {
     color: var(--secondary-color);
+    transform: scale(1.1);
 }
