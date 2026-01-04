@@ -446,10 +446,14 @@ footer {
 }
 
 
-@media (max-width: 430px){
+@media (max-width: 432px){
     #navbar{
-        padding: 5px;
+        padding: 4px;
         margin: 0px;
+    }
+
+    .logo{
+        height: 34px;
     }
 }
 
