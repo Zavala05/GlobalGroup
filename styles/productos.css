@@ -5,20 +5,6 @@
     --text-light: #f4f4f4;
     --bg-light: #f8f9fa;
 }
-html, body {
-    width: 100%;
-    max-width: 100%; /* Asegura que nada exceda el ancho */
-    overflow-x: hidden !important; /* El !important fuerza el corte */
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    box-sizing: border-box !important;
-    margin: 0;
-    padding: 0;
-}
 
 img{
     height: 50px;
@@ -45,9 +31,6 @@ h1, h2, h3, h4, h5 {
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-    width: 100%; 
-    max-width: 100vw;
-    box-sizing: border-box;
 }
 
 .navbar-brand.logo {
@@ -75,9 +58,8 @@ h1, h2, h3, h4, h5 {
     color: var(--secondary-color) !important;
 }
 
-.hero {
+.page-header {
     height: 60vh;
-    width: 100%;
     background: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -85,34 +67,30 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     text-align: center;
     margin-top: 0;
-    overflow: hidden; 
-    max-width: 100vw;
 }
 
-.hero-overlay {
+.header-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 78, 146, 0.8), rgba(0, 0, 0, 0.6));
-    overflow: hidden; 
-    max-width: 100vw;
 }
 
-.hero-content {
+.header-content {
     z-index: 2;
     color: #fff;
     padding: 0 20px;
 }
 
-.hero-content h1 {
+.header-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.hero-content p {
+.header-content p {
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -242,7 +220,6 @@ h1, h2, h3, h4, h5 {
     margin: auto;
     position: relative;
     width: 90%;
-    max-width: 100vw;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -326,7 +303,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .header-content h1 {
         font-size: 2.2rem;
     }
 
@@ -466,4 +443,47 @@ footer {
     background: var(--secondary-color);
     color: #fff;
     border-color: var(--secondary-color);
+}
+
+
+@media (max-width: 430px){
+    #navbar{
+        padding: 5px;
+        margin: 0px;
+    }
+}
+
+@media(max-width:396px){
+    #navbar{
+        padding: 2px;
+        margin: 0px;
+        gap: 0px;
+    }
+
+    img{
+        margin:0px;
+        height: 35px;
+
+    }
+
+    #navbar .logo{
+        font-size: 1.2rem;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 333px){
+     #navbar .logo{
+        font-size: 1.1rem;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 770px){
+    .navbar-toggler{
+       color: white;
+    }
+
+    
+    
 }
