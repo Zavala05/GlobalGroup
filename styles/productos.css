@@ -479,6 +479,14 @@ footer {
     }
 }
 
+@media (max-width:319px){
+    #navbar .logo{
+        font-size: 0.9rem;
+        margin: 0px;
+        height: 35px;
+    }
+}
+
 @media (max-width: 770px){
     .navbar-toggler{
        color: white;
