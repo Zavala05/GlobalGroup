@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5 {
 
 .slide-track {
     display: flex;
-    width: calc(250px * 16); /* Ajustar: Ancho slide (250) * Cantidad Total de Elementos en HTML */
+    width: calc(250px * 16);
     animation: scroll 35s linear infinite;
 }
 
@@ -450,6 +450,7 @@ footer {
     #navbar{
         padding: 4px;
         margin: 0px;
+    
     }
 
     .logo{
@@ -498,4 +499,34 @@ footer {
 
     
     
+}
+
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.brand-logo {
+    height: 50px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    filter: grayscale(100%); 
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.tool-card img {
+    max-height: 60px;
+    max-width: 80%;
 }
