@@ -530,3 +530,494 @@ footer {
     max-height: 60px;
     max-width: 80%;
 }
+
+
+#detailfiltro {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#detailfiltro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/filtros.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#detailhidraulica > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#detailhidraulica {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#detailhidraulica::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/hidraulica.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#detailhidraulica > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#detailneumatica > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#detailneumatica {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#detailneumatica::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/neumatica.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#detailneumatica > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+#deatilrodamientos {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#deatilrodamientos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/rodamientos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#deatilrodamientos > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#detailsensores {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#detailsensores::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/sensores.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#detailsensores > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+#detailvalvulas {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#detailvalvulas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/valvulas.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#detailvalvulas > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#trasnportepesado {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#trasnportepesado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/trasnportepesado.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#trasnportepesado > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+#amarilla {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#amarilla::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/maquinariaamarilla.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#amarilla > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#herramientasmmilwaukee {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#herramientasmmilwaukee::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/milwakie.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#herramientasmmilwaukee > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#urrea {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#urrea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/urrea.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#urrea > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#hilti {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#hilti::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/hilti.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#hilti > * {
+    position: relative;
+    z-index: 1;
+}
+
+#craftsman {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#craftsman::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/craftsman.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#craftsman > * {
+    position: relative;
+    z-index: 1;
+}
+
+#chicago {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#chicago::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/chicago.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#chicago > * {
+    position: relative;
+    z-index: 1;
+}
+
+#makita {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#makita::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/makita.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#makita > * {
+    position: relative;
+    z-index: 1;
+}
+
+#stanley {
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+}
+
+#stanley::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/stanley.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#stanley > * {
+    position: relative;
+    z-index: 1;
+}
+
+#dewalt{
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+
+}
+
+#dewalt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/dewalt.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#dewalt > * {
+    position: relative;
+    z-index: 1;
+}
