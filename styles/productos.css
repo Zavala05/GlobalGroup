@@ -1021,3 +1021,99 @@ footer {
     position: relative;
     z-index: 1;
 }
+
+
+#filtrosauto{
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+
+}
+
+#filtrosauto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/filtroauto.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#filtrosauto > * {
+    position: relative;
+    z-index: 1;
+}
+
+#aceitesauto{
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+
+}
+
+#aceitesauto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/aceiteauto.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#aceitesauto > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#motorcarro{
+    position: relative;
+    overflow: hidden;   
+    background-color: #fff; 
+    z-index: 0;
+
+}
+
+#motorcarro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('../src/motorcarro.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#motorcarro > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
