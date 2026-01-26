@@ -1,3 +1,21 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Corta cualquier cosa que sobresalga horizontalmente */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ayuda a contener elementos absolutos */
+}
+
+img, svg, video, iframe {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --primary-color: #004e92;
     --secondary-color: #fca311;
